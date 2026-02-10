@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Office of the VP Academic Affairs - Chemical Engineering FUTA</title>
+<style>
+  body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; color:#333; }
+  header { background:#006400; color:white; padding:20px; display:flex; align-items:center; justify-content:center; gap:15px; }
+  header img { height:60px; }
+  header h1 { margin:0; font-size:1.8rem; text-align:center; flex:1; }
+  nav { background:#ffffff; display:flex; justify-content:center; padding:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+  nav a { margin:0 15px; text-decoration:none; color:#006400; font-weight:bold; padding:5px 10px; border-radius:5px; }
+  nav a:hover { background:#006400; color:white; }
+  section { padding:40px; text-align:center; display:none; }
+  section.active { display:block; animation:fadeIn 0.5s ease-in; }
+  h2 { color:#006400; }
+  @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+  .resource-group { margin-bottom:20px; text-align:left; max-width:600px; margin:0 auto; }
+  .resource-group h3 { cursor:pointer; background:#006400; color:white; padding:10px; border-radius:5px; }
+  .level-content { display:none; padding:10px; border:1px solid #006400; border-radius:5px; margin-top:5px; }
+  .level-content h4 { margin-top:10px; color:#228B22; }
+  .level-content ul { list-style:none; padding-left:0; }
+  .level-content li { margin-bottom:8px; }
+  footer { background:#004d00; color:white; text-align:center; padding:15px; margin-top:20px; }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="futa_logo.png.jpeg" alt="FUTA Logo">
+  <h1>Chemical Engineering - VP Academic Affairs</h1>
+  <img src="chem_eng_logo.png.png" alt="Chemical Engineering Logo">
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#resources">Resources</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="home" class="active">
+  <h2>Welcome!</h2>
+  <p>Welcome to the Office of the VP Academic Affairs for Chemical Engineering, FUTA.</p>
+</section>
+
+<section id="about">
+  <h2>About the VP Office</h2>
+  <p>The VP Academic Office oversees academic excellence, manages resources, and supports students in the Chemical Engineering Department.</p>
+</section>
+
+<section id="resources">
+  <h2>Academic Resources</h2>
+  <p>Select your level to access Google Drive folders.</p>
+
+  <!-- 100 Level -->
+  <div class="resource-group">
+    <h3 onclick="toggleLevel('l100')">100 Level ▼</h3>
+    <div id="l100" class="level-content">
+      <h4>1st Semester</h4>
+      <a href="https://drive.google.com/drive/folders/100L_1ST" target="_blank">
+        📄 View 1st Semester PDFs
+      </a>
+
+      <h4>2nd Semester</h4>
+      <a href="https://drive.google.com/drive/folders/100L_2ND" target="_blank">
+        📄 View 2nd Semester PDFs
+      </a>
+
+
+      </a>
+    </div>
+  </div>
+
+  <!-- 200 Level -->
+  <div class="resource-group">
+    <h3 onclick="toggleLevel('l200')">200 Level ▼</h3>
+    <div id="l200" class="level-content">
+      <h4>1st Semester</h4>
+      <a href="https://drive.google.com/drive/folders/17JBLMCSWo5XpOBGVugJdKGYpv4Pm9S7d" target="_blank">
+        📄 View 1st Semester PDFs
+      </a>
+
+      <h4>2nd Semester</h4>
+      <a href="https://drive.google.com/drive/folders/148JTYZdimOz4pt9aP8gH0-veR375E7rT" target="_blank">
+        📄 View 2nd Semester PDFs
+      </a>
+
+      </a>
+    </div>
+  </div>
+
+  <!-- 300 Level -->
+  <div class="resource-group">
+    <h3 onclick="toggleLevel('l300')">300 Level ▼</h3>
+    <div id="l300" class="level-content">
+      <h4>1st Semester</h4>
+      <a href="https://drive.google.com/drive/folders/1R_I6lgHNdUj1mx3agLvIbopYx4Gm9YlC?usp=drive_link" target="_blank">
+        📄 View 1st Semester PDFs
+      </a>
+
+      <h4>2nd Semester</h4>
+      <a href="https://drive.google.com/drive/folders/1_1l1xCvNh4yRID9vBVK5tUFwE296AXf7?usp=drive_link" target="_blank">
+        📄 View 2nd Semester PDFs
+      </a>
+
+      </a>
+    </div>
+  </div>
+
+  <!-- 400 Level -->
+  <div class="resource-group">
+    <h3 onclick="toggleLevel('l400')">400 Level ▼</h3>
+    <div id="l400" class="level-content">
+      <h4>1st Semester</h4>
+      <a href="https://drive.google.com/drive/folders/400L_1ST" target="_blank">
+        📄 View 1st Semester PDFs
+      </a>
+
+      <h4>2nd Semester</h4>
+      <a href="https://drive.google.com/drive/folders/400L_2ND" target="_blank">
+        📄 View 2nd Semester PDFs
+      </a>
+
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<section id="contact">
+  <h2>Contact the VP Academic</h2>
+  <p>Email: ajaoelizabeth993@gmail.com</p>
+  <p>Phone: +234-806-220-4424</p>
+</section>
+
+<footer>
+  &copy; 2025/2026 NSChE-FSC ACADEMIC UNIT
+</footer>
+
+<script>
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('nav a');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = link.getAttribute('href').substring(1);
+    sections.forEach(sec => sec.classList.remove('active'));
+    document.getElementById(target).classList.add('active');
+  });
+});
+
+function toggleLevel(levelId){
+  const el = document.getElementById(levelId);
+  el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+}
+</script>
+
+  <!-- Auto-load PDFs from folder (requires index.html or server directory listing) -->
+  <script>
+    function loadFolderPDFs(containerId, folderPath) {
+      fetch(folderPath)
+        .then(response => response.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          const links = [...doc.querySelectorAll('a')].filter(a => a.href.endsWith('.pdf'));
+          const container = document.getElementById(containerId);
+          container.innerHTML = '';
+          links.forEach(a => {
+            const li = document.createElement('li');
+            li.innerHTML = `<a href="${a.href}" target="_blank">${a.textContent}</a>`;
+            container.appendChild(li);
+          });
+        })
+        .catch(err => console.log('Folder cannot be read unless server auto-index is enabled:', err));
+    }
+  // Auto-load PDFs from a folder (works only if server supports directory listing)
+function loadFolderPDFs(containerId, folderPath) {
+  fetch(folderPath)
+    .then(response => response.text())
+    .then(html => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const links = [...doc.querySelectorAll('a')].filter(a => a.href.endsWith('.pdf'));
+      const container = document.getElementById(containerId);
+      container.innerHTML = '';
+      links.forEach(a => {
+        const li = document.createElement('li');
+        li.innerHTML = `<a href="${a.href}" target="_blank">${a.textContent}</a>`;
+        container.appendChild(li);
+      });
+    })
+    .catch(err => console.log('Directory cannot be read unless auto-indexing is enabled:', err));
+}
+// Auto-load PDFs from folder
+function loadFolderPDFs(containerId, folderPath) {
+  fetch(folderPath)
+    .then(res => res.text())
+    .then(html => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const pdfs = [...doc.querySelectorAll('a')].filter(a=>a.href.endsWith('.pdf'));
+      const box = document.getElementById(containerId);
+      box.innerHTML = '';
+      pdfs.forEach(a => {
+        const li = document.createElement('li');
+        li.innerHTML = `<a href="${a.href}" target="_blank">${a.textContent || a.href.split('/').pop()}`;
+        box.appendChild(li);
+      });
+    })
+    .catch(err => console.log('Cannot auto-load: server must allow directory listing', err));
+}
+</script>
+</body>
+</html>

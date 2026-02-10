@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Office of the VP Academic Affairs - Chemical Engineering FUTA</title>
+<style>
+  body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; color:#333; }
+  header { background:#006400; color:white; padding:20px; display:flex; align-items:center; justify-content:center; gap:15px; }
+  header img { height:60px; }
+  header h1 { margin:0; font-size:1.8rem; text-align:center; flex:1; }
+  nav { background:#ffffff; display:flex; justify-content:center; padding:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+  nav a { margin:0 15px; text-decoration:none; color:#006400; font-weight:bold; padding:5px 10px; border-radius:5px; }
+  nav a:hover { background:#006400; color:white; }
+  section { padding:40px; text-align:center; display:none; }
+  section.active { display:block; animation:fadeIn 0.5s ease-in; }
+  h2 { color:#006400; }
+  @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+  .tabs { display:flex; justify-content:center; margin-bottom:20px; flex-wrap:wrap; gap:10px; }
+  .tabs button { padding:10px 20px; border:none; background:#006400; color:white; border-radius:5px; cursor:pointer; transition:background 0.3s; }
+  .tabs button:hover { background:#228B22; }
+  .resource-list { text-align:left; max-width:600px; margin:0 auto; }
+  .resource-list li { margin-bottom:10px; }
+  footer { background:#004d00; color:white; text-align:center; padding:15px; margin-top:20px; }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="futa_logo.png.jpeg" alt="FUTA Logo">
+  <h1>Chemical Engineering - VP Academic Affairs</h1>
+  <img src="chem_eng_logo.png.png" alt="Chemical Engineering Logo">
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#resources">Resources</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="home" class="active">
+  <h2>Welcome!</h2>
+  <p>Welcome to the Office of the VP Academic Affairs for Chemical Engineering, FUTA.</p>
+</section>
+
+<section id="about">
+  <h2>About the VP Office</h2>
+  <p>The VP Academic Office oversees academic excellence, manages resources, and supports students in the Chemical Engineering Department.</p>
+</section>
+
+<section id="resources">
+  <h2>Academic Resources</h2>
+  <div class="tabs">
+    <button onclick="showLevel('100')">100L</button>
+    <button onclick="showLevel('200')">200L</button>
+    <button onclick="showLevel('300')">300L</button>
+    <button onclick="showLevel('400')">400L</button>
+  </div>
+
+  <div id="100" class="resource-list" >
+    <h3>100 Level</h3>
+    <div class="tabs">
+      <button onclick="showSemester('100', 'first')">1st Semester</button>
+      <button onclick="showSemester('100', 'second')">2nd Semester</button>
+      <button onclick="showSemester('100', 'pq')">Past Questions</button>
+    </div>
+  
+    <div id="100-first"
+      class="resource-list"></div>
+      <div id="100-second" class="resource-list"
+      style="display:none;"></div>
+      <div id="100-pq" class="resource-list"
+      style="display:none;"></div> 
+  </div>
+
+  <div id="200" class="resource-list" style="display:none;">
+    <h3>200 Level</h3>
+      <div class="tabs">
+        <button onclick="showSemester('200', 'first')">1st Semester</button>
+        <button onclick="showSemester('200', 'second')">2nd Semester</button>
+        <button onclick="showSemester('200','pq')">Past Questions</button>
+      </div>
+
+      <div id="200-first" 
+      class="resource-list"></div>
+      <div id="200-second" class="resource-list" 
+      style="display:none;"></div>
+      <div id="200-pq" class="resource-list"
+       style="display:none;"></div>
+       </div>
+  
+  <div id="300" class="resource-list" style="display:none;">
+    <h3>300 Level</h3>
+      <div class="tabs">
+        <button onclick="showSemester('300', 'first')">1st Semester</button>
+        <button onclick="showSemester('300', 'second')">2nd Semester</button>
+        <button onclick="showSemester('300','pq')">Past Questions</button>
+      </div>
+      
+         <div id="300-first"
+         class="resource-list"></div>
+         <div id="300-second"
+         class="resource-list"
+        style="display: none;"></div>
+        <div id="300-pq"
+        class="resource-list"
+         style="display:none;"></div>
+         </div>
+
+  <div id="400" class="resource-list" style="display:none;">
+    <h3>400 Level</h3>
+    <div class="tabs">
+      <button onclick="showSemester('400', 'first')">1st Semester</button>
+      <button onclick="showSemester('400', 'second')">2nd Semester</button>
+      <button onclick="showSemester('400', 'pq')">Past Questions</button>
+    </div>
+      
+      <div id="400-first"
+      class="resource-list"></div>
+      <div id="400-second"
+      class="resource-list"
+      style="display:none;"></div>
+      <div id="400-pq"
+      class="resource-list"
+     style="display: none;"></div>
+      </div>
+</section>
+
+<section id="contact">
+  <h2>Contact the VP Academic</h2>
+  <p>Email: ajaoelizabeth993@gmail.com</p>
+  <p>Phone: +234-806-220-4424</p>
+</section>
+
+<footer>
+  &copy; 2025 Chemical Engineering Department, FUTA
+</footer>
+
+<script>
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('nav a');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = link.getAttribute('href').substring(1);
+    sections.forEach(sec => sec.classList.remove('active'));
+    document.getElementById(target).classList.add('active');
+  });
+});
+
+function showLevel(level){
+  document.querySelectorAll('.resource-level').forEach(div => div.style.display = 'none');
+    document.getElementById(level).style.display = 'block';
+  }
+
+  function showSemester(level, semester) {
+    ['first', 'second', 'pq'].forEach(s => {
+      document.getElementById('${level} - ${s}').style.display 
+      = (s === semester) ?
+      'block' : 'none' ;
+    })
+  }
+
+</script>
+
+</body>
+</html>
